@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">chatoff</string>
     <string name="numeroHint">Telefone</string>
-    <string name="btnNumero">Confirmar</string>
-    <string name="nomeHint">Nome</string>
+    <string name="btnNumero">Entrar</string>
+    <string name="textoHint">Para utilizar o ChatOff, precisamos que você forneça o seu
+    número de telefone!</string>
+
 </resources>
