@@ -7,11 +7,12 @@
     tools:context=".MainActivity">
 
 
-    <fragment
-        android:id="@+id/tabId"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_tab"/>
+    <!--<fragment-->
+        <!--android:id="@+id/tabId"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:layout="@layout/fragment_tab"-->
+        <!--/>-->
 
 
 </android.support.constraint.ConstraintLayout>
