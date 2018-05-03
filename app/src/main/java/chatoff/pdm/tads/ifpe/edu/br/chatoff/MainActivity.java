@@ -1,11 +1,14 @@
 package chatoff.pdm.tads.ifpe.edu.br.chatoff;
 
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TabHost;
 
+import chatoff.pdm.tads.ifpe.edu.br.chatoff.PerfilFragment.OnFragmentInteractionListener;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
 
 
     @Override
@@ -21,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         mSpec.setIndicator("Conversas");
         mTabHost.addTab(mSpec);
 
+
+
         mSpec = mTabHost.newTabSpec("Contatos");
         mSpec.setContent(R.id.contatos);
         mSpec.setIndicator("Contatos");
@@ -33,5 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
+    }
 }

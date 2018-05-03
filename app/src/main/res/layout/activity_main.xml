@@ -27,39 +27,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/iconechatoff"
-                        android:layout_marginTop="40dp"
-                        android:layout_gravity="center_horizontal"/>
+
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/contatos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/secret_star"
-                        android:layout_marginTop="40dp"
-                        android:layout_gravity="center_horizontal"/>
+
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/perfil"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-                    <ImageView
+                    <fragment
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/app_name"
-                        android:src="@drawable/iconechatoff"
-                        android:layout_marginTop="40dp"
-                        android:layout_gravity="center_horizontal"/>
+                        android:id="@+id/fragPerfil"
+                        class="chatoff.pdm.tads.ifpe.edu.br.chatoff.PerfilFragment"
+                        />
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
