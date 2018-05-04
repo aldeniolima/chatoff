@@ -8,7 +8,7 @@ import android.widget.TabHost;
 import chatoff.pdm.tads.ifpe.edu.br.chatoff.PerfilFragment.OnFragmentInteractionListener;
 
 
-public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity {
 
 
     @Override
@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         mSpec.setIndicator("Conversas");
         mTabHost.addTab(mSpec);
 
-
-
         mSpec = mTabHost.newTabSpec("Contatos");
         mSpec.setContent(R.id.contatos);
         mSpec.setIndicator("Contatos");
@@ -37,9 +35,4 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
         mTabHost.addTab(mSpec);
     }
 
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
 }

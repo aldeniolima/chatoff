@@ -27,14 +27,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/contatos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
+                    <fragment
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/list"
+                        class="chatoff.pdm.tads.ifpe.edu.br.chatoff.ItemFragment"
+                        />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/perfil"
@@ -42,8 +46,8 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <fragment
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:id="@+id/fragPerfil"
                         class="chatoff.pdm.tads.ifpe.edu.br.chatoff.PerfilFragment"
                         />
