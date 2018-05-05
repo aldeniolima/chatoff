@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Conversa">
+
+
+    <!-- Procurar forma de por linha abaixo de cada fragmento -->
+
+    <ImageView
+        android:id="@+id/iconeContatoId"
+        android:layout_width="82dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/iconecontato"
+        android:src="@drawable/contato" />
+
+    <TextView
+        android:id="@+id/ultimaMensagemI"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Última Mensagem" />
+
+    <TextView
+        android:id="@+id/nomeContatoId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ultimaMensagemI"
+        android:layout_alignTop="@+id/iconeContatoId"
+        android:text="Contato"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <ImageView
+        android:id="@+id/humorId"
+        android:layout_width="37dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="67dp"
+        android:src="@drawable/coracao" />
+
+    <TextView
+        android:id="@+id/horaUltimaMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/nomeContatoId"
+        android:layout_marginEnd="12dp"
+        android:text="11:43" />
+
+</RelativeLayout>
