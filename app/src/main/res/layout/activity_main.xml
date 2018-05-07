@@ -22,14 +22,20 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <LinearLayout
                     android:id="@+id/conversas"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    class="chatoff.pdm.tads.ifpe.edu.br.chatoff.ConversaFragment">
-
+                    android:orientation="vertical">
+                    <fragment
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/list_conversa"
+                        class="chatoff.pdm.tads.ifpe.edu.br.chatoff.ConversaFragment"
+                        />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/contatos"
                     android:layout_width="match_parent"
