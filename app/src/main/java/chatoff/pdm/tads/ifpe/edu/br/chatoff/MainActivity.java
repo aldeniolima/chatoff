@@ -8,7 +8,7 @@ import android.widget.TabHost;
 import chatoff.pdm.tads.ifpe.edu.br.chatoff.PerfilFragment.OnFragmentInteractionListener;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener{
 
 
     @Override
@@ -34,5 +34,10 @@ public class MainActivity extends AppCompatActivity {
         mSpec.setIndicator("Perfil");
         mTabHost.addTab(mSpec);
     }
+
+   @Override
+        public void onFragmentInteraction(Uri uri) {
+
+        }
 
 }

@@ -83,10 +83,9 @@ public class ConversaFragment extends Fragment implements View.OnClickListener {
 
         return rootView;
 
-
-
-
     }
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -98,11 +97,10 @@ public class ConversaFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view){
         Fragment fragmento = null;
-        switch (view.getId()){
-            case R.id.nomeContatoId:
+
                 fragmento = new MensagemFragment();
                 trocarFragmento(fragmento);
-        }
+
     }
 
     public void trocarFragmento(Fragment fragmento){
@@ -118,15 +116,14 @@ public class ConversaFragment extends Fragment implements View.OnClickListener {
     }
 
 
-    @Override
+      @Override
     public void onAttach(Context context) {
-       super.onAttach(context);
-     /*    if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }*/
+        super.onAttach(context);
+//        if (context instanceof PerfilFragment.OnFragmentInteractionListener) {
+//            mListener = (PerfilFragment.OnFragmentInteractionListener) context;
+//        } else {
+//           mListener = null;
+//        }
     }
 
     @Override
