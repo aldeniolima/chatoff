@@ -4,9 +4,13 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
@@ -17,7 +21,7 @@ import android.view.ViewGroup;
  * Use the {@link ConversaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ConversaFragment extends Fragment {
+public class ConversaFragment extends Fragment implements View.OnClickListener {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,6 +30,7 @@ public class ConversaFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -58,13 +63,29 @@ public class ConversaFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_conversa, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_conversa, container, false);
+
+
+        Button botaoConversa = rootView.findViewById(R.id.botaoConversa);
+
+        botaoConversa.setOnClickListener(this);
+
+        return rootView;
+
+
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -73,6 +94,29 @@ public class ConversaFragment extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
+
+    @Override
+    public void onClick(View view){
+        Fragment fragmento = null;
+        switch (view.getId()){
+            case R.id.nomeContatoId:
+                fragmento = new MensagemFragment();
+                trocarFragmento(fragmento);
+        }
+    }
+
+    public void trocarFragmento(Fragment fragmento){
+
+        FragmentTransaction transacao = getFragmentManager().beginTransaction();
+
+        transacao.replace(R.id.list_conversa, fragmento);
+
+        transacao.addToBackStack(null);
+
+        transacao.commit();
+
+    }
+
 
     @Override
     public void onAttach(Context context) {
